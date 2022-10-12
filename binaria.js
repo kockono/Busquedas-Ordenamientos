@@ -9,6 +9,7 @@
  * @var   arrayNumbers[] - Arreglo de numeros
  * @var   left   - Inicialmente apunta al indice 0
  * @var   right  - Apunta al indice final
+ * @var   x      - ???????
  * @const pivote - Apuntador que mueve la posición de apartir de que posición va buscar 
  */
 
@@ -16,7 +17,8 @@ let arrayNumbers = [55,44,11,24,5,22,445,6,1,3,57];
 let right;
 let left;
 
- function binarySearch(array, l, r, x) {
+
+function binarySearch(array, l, r, x) {
     if(l > r) return -1;
     
     // Suma las 2 posiciones y las divide entre 2 para saber a que posición movera el pivote, redondea la posición
