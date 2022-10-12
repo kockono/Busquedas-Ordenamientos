@@ -2,7 +2,7 @@
  * Este código ordena del mayor a menor a traves de la comparativa de 2 numeros, si es menor cambia la posicion del 
  * numero anterior 9,3 pasaría a 3,9
  * @method {@link_bubbleSort} - Ordenamiento con la comparación de 2 posiciones
- * @param  {array}          - array de numeros
+ * @param  {array}            - array de numeros
  */
 
 
@@ -13,13 +13,14 @@ function bubbleSort(array) {
     for(let i = 0; i < array.length - 1; i++) {
         for (let j = 0; j < array.length - 1; j++) {
             // Compara la primera posicion con la siguiente
-            comparePositions(array)
+            comparePositions(array, j)
+            // comparePositionsForm2(array, j)
         }
     }
     return array;
  }
  
- function comparePositions() {
+ function comparePositions(array, j) {
     if( array[j] > array[j+1]) {
         // Guardamos temporalmente el numero que remplazara el menor al mayor, par así mas adelante moverlo en la posicion
         // que se encontraba el menor
@@ -30,5 +31,12 @@ function bubbleSort(array) {
         array[j+1] = auxiliar;
     }
  }
+
+ function comparePositionsForm2(array , j) {
+    if( array[j] > array[j+1]) {
+        [array[j], array[j+1]] = [array[j+1], array[j]]
+    }
+ }
+
  console.log( bubbleSort(arrayNumbers) );
  
