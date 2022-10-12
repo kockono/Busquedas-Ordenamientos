@@ -22,7 +22,7 @@ let left;
     // Suma las 2 posiciones y las divide entre 2 para saber a que posición movera el pivote, redondea la posición
     const pivote = Math.floor( (l + r) / 2);
 
-    if(array == x) return pivote;
+    if(array == x) return pivote; // Si la posición es igual al dato que buscar retorna el pivote y termina la recursividad
 
     if(array < x) {
         return binarySearch(array, pivote + 1) // Mueve el pivote a la derecha
