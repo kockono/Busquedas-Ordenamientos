@@ -32,4 +32,5 @@ class Node {
     }
 }
 
-console.log(new Node(15))
+const head = new Node(5);
+console.log(head.add(15));
