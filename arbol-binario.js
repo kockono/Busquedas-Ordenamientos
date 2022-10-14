@@ -15,7 +15,7 @@ class Node {
         }
     }
 
-    addToTheRight() {
+    addToTheRight(value) {
         if(this.right) {
             this.left.add(value);
         } else {
@@ -23,7 +23,7 @@ class Node {
         }
     }
 
-    addToTheLeft() {
+    addToTheLeft(value) {
         if (this.left) {
             this.left.add(value);
         } else {
